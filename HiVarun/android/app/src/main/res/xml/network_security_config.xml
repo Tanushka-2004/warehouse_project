@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Block all cleartext (HTTP) by default -->
+    <base-config cleartextTrafficPermitted="false" />
+    
+    <!-- Allow HTTP only for development servers -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">10.0.2.2</domain> <!-- Emulator -->
+        <domain includeSubdomains="true">192.168.1.100</domain> <!-- Your PC’s IP -->
+    </domain-config>
+</network-security-config>
